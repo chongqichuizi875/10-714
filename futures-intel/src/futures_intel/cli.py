@@ -22,6 +22,27 @@ def build_parser() -> argparse.ArgumentParser:
         prog="futures-intel",
         description="Collect and summarize public futures member-position rankings for personal research.",
     )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    demo = sub.add_parser("demo", help="Run the JM / 焦煤 demo end to end")
+    _add_collect_args(demo)
+    demo.add_argument("--symbol", default="JM", help="Commodity symbol (default: JM)")
+    demo.add_argument("--date", help="Trade date YYYY-MM-DD. Default: latest available.")
+    demo.add_argument("--contract", help="Concrete contract such as JM2701. Default: main contract.")
+
+    fetch = sub.add_parser("fetch", help="Fetch one variety and write local files")
+    _add_collect_args(fetch)
+    fetch.add_argument("--symbol", required=True)
+    fetch.add_argument("--date")
+    fetch.add_argument("--contract")
+
+    summarize_cmd = sub.add_parser("summarize", help="Rebuild a markdown report from a processed snapshot")
+    summarize_cmd.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
+    summarize_cmd.add_argument("--snapshot", type=Path, required=True, help="Processed JSON snapshot")
+    return parser
+
+
+def _add_collect_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--data-dir",
         type=Path,
@@ -33,21 +54,6 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Reuse cache only. Do not open a new network connection.",
     )
-    sub = parser.add_subparsers(dest="command", required=True)
-
-    demo = sub.add_parser("demo", help="Run the JM / 焦煤 demo end to end")
-    demo.add_argument("--symbol", default="JM", help="Commodity symbol (default: JM)")
-    demo.add_argument("--date", help="Trade date YYYY-MM-DD. Default: latest available.")
-    demo.add_argument("--contract", help="Concrete contract such as JM2701. Default: main contract.")
-
-    fetch = sub.add_parser("fetch", help="Fetch one variety and write local files")
-    fetch.add_argument("--symbol", required=True)
-    fetch.add_argument("--date")
-    fetch.add_argument("--contract")
-
-    summarize_cmd = sub.add_parser("summarize", help="Rebuild a markdown report from a processed snapshot")
-    summarize_cmd.add_argument("--snapshot", type=Path, required=True, help="Processed JSON snapshot")
-    return parser
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -89,9 +95,14 @@ def _collect(
 
     summary = summarize(snapshot)
     markdown = render_markdown(summary)
-    paths = {}
-    paths.update(store.write_snapshot(snapshot))
-    paths.update(store.write_summary(summary, markdown))
+    snapshot_paths = store.write_snapshot(snapshot)
+    summary_paths = store.write_summary(summary, markdown)
+    paths = {
+        "snapshot_json": snapshot_paths["json"],
+        "snapshot_csv": snapshot_paths["csv"],
+        "report_json": summary_paths["json"],
+        "report_markdown": summary_paths["markdown"],
+    }
 
     print(markdown)
     print("local files:")
