@@ -1,0 +1,10 @@
+# Watchlist for this collector. JM is the first demo variety.
+# Add more sections later using the Eastmoney TRADE_CODE (e.g. J, I, RB).
+
+[JM]
+name = "焦煤"
+exchange = "DCE"
+exchange_name = "大连商品交易所"
+eastmoney_trade_code = "JM"
+unit = "手"
+notes = "大商所焦煤期货。会员成交持仓排名来自交易所日常披露，东方财富网页只是转载入口。"

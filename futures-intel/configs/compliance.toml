@@ -1,0 +1,20 @@
+# Conservative defaults for personal research. Raise these only after
+# reading docs/COMPLIANCE.md and the Eastmoney legal statement.
+
+purpose = "personal_research"
+allow_network = true
+
+# Identify this client. Do not impersonate a browser to evade controls.
+user_agent = "futures-intel/0.1 (+personal-research; rate-limited; no-redistribution)"
+
+min_interval_seconds = 1.5
+max_requests_per_run = 12
+timeout_seconds = 20
+cache_ttl_hours = 20
+
+# Fail closed when the site asks us to stop.
+stop_on_status = [401, 403, 407, 429, 451]
+
+referer = "https://data.eastmoney.com/futures/sh/data.html"
+legal_url = "https://about.eastmoney.com/home/legal"
+page_url = "https://data.eastmoney.com/futures/sh/data.html"

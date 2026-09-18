@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Live fetches stay local. Do not publish raw Eastmoney dumps.
+data/raw/
+data/processed/
+data/reports/
+!data/.gitkeep
+.http-cache/
