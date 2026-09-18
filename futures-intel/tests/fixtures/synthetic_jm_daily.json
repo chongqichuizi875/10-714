@@ -1,0 +1,243 @@
+{
+  "contracts": {
+    "version": "test",
+    "success": true,
+    "message": "ok",
+    "code": 0,
+    "result": {
+      "pages": 1,
+      "count": 2,
+      "data": [
+        {
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_CODE": "JM",
+          "TRADE_TYPE": "焦煤",
+          "SECURITY_CODE": "JM2701",
+          "IS_MAINCODE": "1"
+        },
+        {
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_CODE": "JM",
+          "TRADE_TYPE": "焦煤",
+          "SECURITY_CODE": "JM2705",
+          "IS_MAINCODE": "0"
+        }
+      ]
+    }
+  },
+  "latest": {
+    "version": "test",
+    "success": true,
+    "message": "ok",
+    "code": 0,
+    "result": {
+      "pages": 1,
+      "count": 1,
+      "data": [
+        {
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "SECURITY_CODE": "JM2701"
+        }
+      ]
+    }
+  },
+  "members": {
+    "version": "test",
+    "success": true,
+    "message": "ok",
+    "code": 0,
+    "result": {
+      "pages": 1,
+      "count": 6,
+      "data": [
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "1",
+          "MEMBER_NAME_ABBR": "示例甲（代客）",
+          "ORG_NAME_ABBR_NEW": "示例甲",
+          "VOLUMERANK": 2,
+          "LPRANK": 1,
+          "SPRANK": 4,
+          "VOLUME": 80000,
+          "VOLUME_CHANGE": 1000,
+          "LONG_POSITION": 40000,
+          "LP_CHANGE": 1200,
+          "SHORT_POSITION": 10000,
+          "SP_CHANGE": -300,
+          "NET_LONG_POSITION": 30000,
+          "NLP_CHANGE": 1500,
+          "NET_SHORT_POSITION": null,
+          "NSP_CHANGE": null,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        },
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "2",
+          "MEMBER_NAME_ABBR": "示例乙（代客）",
+          "ORG_NAME_ABBR_NEW": "示例乙",
+          "VOLUMERANK": 1,
+          "LPRANK": 2,
+          "SPRANK": 1,
+          "VOLUME": 120000,
+          "VOLUME_CHANGE": 5000,
+          "LONG_POSITION": 35000,
+          "LP_CHANGE": -800,
+          "SHORT_POSITION": 36000,
+          "SP_CHANGE": 2000,
+          "NET_LONG_POSITION": null,
+          "NLP_CHANGE": null,
+          "NET_SHORT_POSITION": 1000,
+          "NSP_CHANGE": 2800,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        },
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "3",
+          "MEMBER_NAME_ABBR": "示例丙（代客）",
+          "ORG_NAME_ABBR_NEW": "示例丙",
+          "VOLUMERANK": 3,
+          "LPRANK": 3,
+          "SPRANK": 2,
+          "VOLUME": 50000,
+          "VOLUME_CHANGE": -2000,
+          "LONG_POSITION": 22000,
+          "LP_CHANGE": 400,
+          "SHORT_POSITION": 18000,
+          "SP_CHANGE": 100,
+          "NET_LONG_POSITION": 4000,
+          "NLP_CHANGE": 300,
+          "NET_SHORT_POSITION": null,
+          "NSP_CHANGE": null,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        },
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "4",
+          "MEMBER_NAME_ABBR": "示例丁（代客）",
+          "ORG_NAME_ABBR_NEW": "示例丁",
+          "VOLUMERANK": 9999,
+          "LPRANK": 4,
+          "SPRANK": 3,
+          "VOLUME": null,
+          "VOLUME_CHANGE": null,
+          "LONG_POSITION": 18000,
+          "LP_CHANGE": -200,
+          "SHORT_POSITION": 15000,
+          "SP_CHANGE": 50,
+          "NET_LONG_POSITION": 3000,
+          "NLP_CHANGE": -250,
+          "NET_SHORT_POSITION": null,
+          "NSP_CHANGE": null,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        },
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "5",
+          "MEMBER_NAME_ABBR": "示例戊（代客）",
+          "ORG_NAME_ABBR_NEW": "示例戊",
+          "VOLUMERANK": 4,
+          "LPRANK": 5,
+          "SPRANK": 5,
+          "VOLUME": 30000,
+          "VOLUME_CHANGE": 800,
+          "LONG_POSITION": 15000,
+          "LP_CHANGE": 100,
+          "SHORT_POSITION": 12000,
+          "SP_CHANGE": -50,
+          "NET_LONG_POSITION": 3000,
+          "NLP_CHANGE": 150,
+          "NET_SHORT_POSITION": null,
+          "NSP_CHANGE": null,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        },
+        {
+          "SECUCODE": "JM2701.DCE",
+          "SECURITY_CODE": "JM2701",
+          "TRADE_MARKET_CODE": "069001007",
+          "TRADE_DATE": "2026-09-17 00:00:00",
+          "ORG_CODE": "6",
+          "MEMBER_NAME_ABBR": "示例己（代客）",
+          "ORG_NAME_ABBR_NEW": "示例己",
+          "VOLUMERANK": 5,
+          "LPRANK": 9999,
+          "SPRANK": 6,
+          "VOLUME": 20000,
+          "VOLUME_CHANGE": 100,
+          "LONG_POSITION": 4000,
+          "LP_CHANGE": 50,
+          "SHORT_POSITION": 9000,
+          "SP_CHANGE": 400,
+          "NET_LONG_POSITION": null,
+          "NLP_CHANGE": null,
+          "NET_SHORT_POSITION": 5000,
+          "NSP_CHANGE": 350,
+          "SETTLE_PRICE": 1600.0,
+          "TYPE": "0",
+          "TRADE_CODE": "JM"
+        }
+      ]
+    }
+  },
+  "totals": {
+    "version": "test",
+    "success": true,
+    "message": "ok",
+    "code": 0,
+    "result": {
+      "pages": 1,
+      "count": 3,
+      "data": [
+        {
+          "MEMBER_NAME_ABBR": "本日合计",
+          "VOLUME": 1000000,
+          "VOLUME_CHANGE": 10000,
+          "LONG_POSITION": 300000,
+          "LP_CHANGE": 1000,
+          "SHORT_POSITION": 290000,
+          "SP_CHANGE": 2000,
+          "NET_LONG_POSITION": 70000,
+          "TYPE": "2"
+        },
+        {
+          "MEMBER_NAME_ABBR": "上日合计",
+          "VOLUME": 990000,
+          "LONG_POSITION": 299000,
+          "SHORT_POSITION": 288000,
+          "TYPE": "2"
+        },
+        {
+          "MEMBER_NAME_ABBR": "总量增减",
+          "VOLUME": 10000,
+          "LONG_POSITION": 1000,
+          "SHORT_POSITION": 2000,
+          "TYPE": "2"
+        }
+      ]
+    }
+  }
+}
